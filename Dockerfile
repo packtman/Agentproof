@@ -22,6 +22,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV PORT=3000
+ENV DATABASE_PATH=/app/data/agentproof.db
 
 # Install runtime dependencies for better-sqlite3
 RUN apk add --no-cache libstdc++
@@ -43,4 +44,4 @@ USER agentproof
 
 EXPOSE 3000
 
-CMD ["node", "dist/index.js"]
+CMD ["node", "--experimental-specifier-resolution=node", "dist/index.js"]

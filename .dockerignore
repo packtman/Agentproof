@@ -1,0 +1,16 @@
+node_modules
+dist
+.git
+.gitignore
+*.md
+!public/*.md
+.env
+.env.*
+*.log
+.DS_Store
+web
+data
+*.db
+.do
+scripts
+test-*.mjs

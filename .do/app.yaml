@@ -19,11 +19,7 @@ services:
         value: "3000"
       - key: DATABASE_PATH
         value: /app/data/agentproof.db
-      - key: JWT_PRIVATE_KEY
-        type: SECRET
-      - key: JWT_PUBLIC_KEY
-        type: SECRET
     health_check:
       http_path: /health
-      initial_delay_seconds: 10
+      initial_delay_seconds: 15
       period_seconds: 30
