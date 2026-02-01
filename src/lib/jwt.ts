@@ -34,23 +34,22 @@ let privateKey: jose.KeyLike | null = null;
 let publicKey: jose.KeyLike | null = null;
 
 /**
- * Initialize JWT keys from environment
+ * Initialize JWT keys from environment or generate temporary ones
  */
 export async function initializeKeys(): Promise<void> {
   const privateKeyB64 = process.env.JWT_PRIVATE_KEY;
   const publicKeyB64 = process.env.JWT_PUBLIC_KEY;
 
   if (!privateKeyB64 || !publicKeyB64) {
-    console.error("❌ FATAL: JWT_PRIVATE_KEY and JWT_PUBLIC_KEY must be set in .env");
-    console.error("");
-    console.error("   To generate keys, run:");
-    console.error("   openssl genpkey -algorithm ed25519 -out private.pem");
-    console.error("   openssl pkey -in private.pem -pubout -out public.pem");
-    console.error("   Then base64 encode and add to .env:");
-    console.error("   JWT_PRIVATE_KEY=$(cat private.pem | base64)");
-    console.error("   JWT_PUBLIC_KEY=$(cat public.pem | base64)");
-    console.error("");
-    process.exit(1);
+    console.warn("⚠️  JWT keys not configured. Generating temporary keys...");
+    console.warn("   Note: Proof tokens will be invalidated on server restart.");
+    console.warn("   For production, set JWT_PRIVATE_KEY and JWT_PUBLIC_KEY in .env");
+    
+    const keyPair = await generateKeyPair();
+    privateKey = keyPair.privateKey;
+    publicKey = keyPair.publicKey;
+    console.log("✅ Temporary JWT keys generated");
+    return;
   }
 
   try {
@@ -59,7 +58,7 @@ export async function initializeKeys(): Promise<void> {
     
     privateKey = await jose.importPKCS8(privateKeyPem, "EdDSA");
     publicKey = await jose.importSPKI(publicKeyPem, "EdDSA");
-    console.log("✅ JWT keys loaded");
+    console.log("✅ JWT keys loaded from environment");
   } catch (error) {
     console.error("❌ Failed to load JWT keys:", error);
     throw error;
