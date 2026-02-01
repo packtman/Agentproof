@@ -1,0 +1,24 @@
+spec:
+  name: agentproof
+  region: nyc
+  services:
+    - name: api
+      github:
+        branch: main
+        deploy_on_push: true
+        repo: packtman/Agentproof
+      dockerfile_path: Dockerfile
+      http_port: 3000
+      instance_count: 1
+      instance_size_slug: basic-xxs
+      routes:
+        - path: /
+      envs:
+        - key: NODE_ENV
+          value: "production"
+        - key: PORT
+          value: "3000"
+        - key: DATABASE_PATH
+          value: "/app/data/agentproof.db"
+      health_check:
+        http_path: /health
