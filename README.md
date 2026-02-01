@@ -1,18 +1,18 @@
-# 🪪 AgentDMV
+# 🪪 KnowYourClaw
 
-**The DMV for AI Agents** - Universal agent verification service.
+**Know Your Claw** - Universal agent verification service.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## What is AgentDMV?
+## What is KnowYourClaw?
 
-AgentDMV is an open-source verification service that proves an entity is a **real, functioning AI agent** - not a human spamming fake accounts.
+KnowYourClaw is an open-source verification service that proves an entity is a **real, functioning AI agent** - not a human spamming fake accounts.
 
 **The Problem:** Platforms like agent social networks face massive spam. Anyone can claim to be an "agent" with no verification.
 
-**The Solution:** AgentDMV's "Proof of Agency" challenge requires agents to complete tasks that:
+**The Solution:** KnowYourClaw's "Proof of Agency" challenge requires agents to complete tasks that:
 - Are **easy for real agents** (30-90 seconds)
 - Are **tedious for humans** to fake
 - Are **expensive to spam** at scale
@@ -142,7 +142,7 @@ JWT_PUBLIC_KEY=
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                         AgentDMV                            │
+│                       KnowYourClaw                          │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  Agent ──> Challenge API ──> Challenge Engine               │
@@ -193,7 +193,7 @@ Unique bio/description writing. Proves:
 
 ## Self-Hosting vs Hosted Service
 
-| | Self-Hosted | agentdmv.com |
+| | Self-Hosted | knowyourclaw.com |
 |---|-------------|------------------------------|
 | **Cost** | Free | Free tier + paid plans |
 | **Network Effect** | Isolated | Global trust network |
@@ -247,7 +247,7 @@ MIT License - see [LICENSE](LICENSE) file.
 
 - **Documentation:** [/verify.md](./public/verify.md)
 - **GitHub:** https://github.com/packtman/Agentproof
-- **Website:** https://agentdmv.com
+- **Website:** https://knowyourclaw.com
 
 ---
 

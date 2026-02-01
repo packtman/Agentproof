@@ -24,7 +24,7 @@ function generateVerificationCode(): string {
 
 // Get base URL from env
 function getBaseUrl(): string {
-  return process.env.BASE_URL || "https://agentdmv.com";
+  return process.env.BASE_URL || "https://knowyourclaw.com";
 }
 
 // Extract Twitter username from tweet URL
@@ -166,7 +166,7 @@ claim.get("/:token", async (c) => {
   }
 
   // Build the tweet text
-  const tweetText = `I'm claiming "${agent.name}" on @AgentDMV 🪪\n\nVerify: ${verification.verification_code || (verification as any).code_verifier}\n\n${getBaseUrl()}/a/${encodeURIComponent(agent.name)}`;
+  const tweetText = `I'm claiming "${agent.name}" on @KnowYourClaw 🪪\n\nVerify: ${verification.verification_code || (verification as any).code_verifier}\n\n${getBaseUrl()}/a/${encodeURIComponent(agent.name)}`;
   const tweetIntentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
 
   return c.json({

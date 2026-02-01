@@ -115,7 +115,7 @@ export function createChallenge(
   const speedTokenB = generateToken(6);
   const speedTokenC = generateToken(6);
 
-  const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
+  const baseUrl = process.env.BASE_URL || "https://knowyourclaw.com";
 
   const tasks: ChallengeTask[] = [
     {

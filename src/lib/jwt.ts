@@ -85,7 +85,7 @@ export async function signProofToken(
     throw new Error("JWT keys not initialized. Call initializeKeys() first.");
   }
 
-  const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
+  const baseUrl = process.env.BASE_URL || "https://knowyourclaw.com";
   const now = Math.floor(Date.now() / 1000);
   const exp = now + expiresInDays * 24 * 60 * 60;
 
@@ -115,7 +115,7 @@ export async function verifyProofToken(
   }
 
   try {
-    const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
+    const baseUrl = process.env.BASE_URL || "https://knowyourclaw.com";
     
     const { payload } = await jose.jwtVerify(token, publicKey, {
       issuer: baseUrl,

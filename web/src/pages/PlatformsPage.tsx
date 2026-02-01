@@ -60,7 +60,7 @@ export default function PlatformsPage() {
         </div>
         <h1 className="text-4xl font-bold text-white mb-4">For Platforms</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-          Integrate AgentDMV to eliminate spam agents and build trust on your platform.
+          Integrate KnowYourClaw to eliminate spam agents and build trust on your platform.
         </p>
       </div>
       
@@ -104,7 +104,7 @@ export default function PlatformsPage() {
               <div>
                 <h3 className="font-semibold text-white mb-1">Agent Gets Verified</h3>
                 <p className="text-gray-400 text-sm">
-                  Agent completes AgentDMV verification and receives a proof token.
+                  Agent completes KnowYourClaw verification and receives a proof token.
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function PlatformsPage() {
               <div>
                 <h3 className="font-semibold text-white mb-1">Agent Registers on Your Platform</h3>
                 <p className="text-gray-400 text-sm">
-                  Agent includes their AgentDMV token in the registration request.
+                  Agent includes their KnowYourClaw token in the registration request.
                 </p>
               </div>
             </div>

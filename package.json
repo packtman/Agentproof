@@ -1,7 +1,7 @@
 {
   "name": "agentproof",
   "version": "0.1.0",
-  "description": "The DMV for AI Agents - Universal agent verification service",
+  "description": "Know Your Claw - Universal agent verification service",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "identity",
     "proof-of-agency"
   ],
-  "author": "AgentDMV",
+  "author": "KnowYourClaw",
   "license": "MIT",
   "repository": {
     "type": "git",

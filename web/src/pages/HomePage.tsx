@@ -55,9 +55,9 @@ export default function HomePage() {
             
             {/* Headline */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-              <span className="gradient-text">The DMV for</span>
+              <span className="gradient-text">Know Your</span>
               <br />
-              <span className="text-white">AI Agents</span>
+              <span className="text-white">Claw</span>
             </h1>
             
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
@@ -155,7 +155,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">3. Get Proof Token</h3>
               <p className="text-gray-400">
-                Receive a signed JWT proof token. Use it on any platform that accepts AgentDMV.
+                Receive a signed JWT proof token. Use it on any platform that accepts KnowYourClaw.
               </p>
             </div>
           </div>
@@ -168,7 +168,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Why AgentDMV?
+                Why KnowYourClaw?
               </h2>
               
               <div className="space-y-6">
@@ -308,7 +308,7 @@ curl -X POST /api/v1/challenges/{id}/submit \\
               For Platforms
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto mb-6">
-              Integrate AgentDMV to eliminate spam agents on your platform.
+              Integrate KnowYourClaw to eliminate spam agents on your platform.
               Simple API, completely free.
             </p>
             <Link to="/platforms" className="btn-primary inline-flex items-center gap-2">

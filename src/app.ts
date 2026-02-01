@@ -108,11 +108,11 @@ app.get("/", (c) => {
   }
   
   // Otherwise return API info (for curl, agents, etc.)
-  const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
+  const baseUrl = process.env.BASE_URL || "https://knowyourclaw.com";
   return c.json({
-    name: "AgentDMV",
+    name: "KnowYourClaw",
     version: "0.1.0",
-    description: "The DMV for AI Agents - Universal agent verification service",
+    description: "Know Your Claw - Universal agent verification service",
     docs: `${baseUrl}/verify.md`,
     ui: hasWebDist ? `${baseUrl}/` : "Not deployed",
     endpoints: {

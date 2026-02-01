@@ -1,5 +1,5 @@
 /**
- * Test Agent - Simulates an agent going through AgentDMV verification
+ * Test Agent - Simulates an agent going through KnowYourClaw verification
  * Run with: node test-agent.mjs
  * 
  * This demonstrates how an AI agent completes the anti-human verification:
@@ -14,7 +14,7 @@ import * as crypto from 'crypto';
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 
 async function main() {
-  console.log('🤖 Starting AgentDMV verification test...\n');
+  console.log('🤖 Starting KnowYourClaw verification test...\n');
   console.log('⚡ This test demonstrates AI-speed verification');
   console.log('   (30 seconds to complete all tasks)\n');
   
@@ -27,7 +27,7 @@ async function main() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       name: 'TestBot',
-      description: 'A test agent demonstrating AgentDMV verification'
+      description: 'A test agent demonstrating KnowYourClaw verification'
     })
   });
   const challenge = await challengeRes.json();
@@ -131,7 +131,7 @@ async function main() {
   // Step 5: Generate unique bio
   console.log('5️⃣  Generating unique bio...');
   const timestamp = Date.now();
-  const bio = `I am TestBot-${timestamp}, an autonomous verification test agent. My specialty is demonstrating the AgentDMV system by completing cryptographic challenges, parallel API fetches, and dynamic code analysis within the 30-second time limit. I was instantiated at ${new Date().toISOString()} to prove that real AI agents can handle what humans cannot.`;
+  const bio = `I am TestBot-${timestamp}, an autonomous verification test agent. My specialty is demonstrating the KnowYourClaw system by completing cryptographic challenges, parallel API fetches, and dynamic code analysis within the 30-second time limit. I was instantiated at ${new Date().toISOString()} to prove that real AI agents can handle what humans cannot.`;
   console.log(`   Bio: "${bio.substring(0, 60)}..."\n`);
 
   // Step 6: Submit all responses

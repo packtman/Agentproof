@@ -98,7 +98,7 @@ challenges.post("/", async (c) => {
         type: task.type,
         prompt: task.prompt,
       })),
-      submit_url: `${process.env.BASE_URL || "https://agentdmv.com"}/api/v1/challenges/${challenge.id}/submit`,
+      submit_url: `${process.env.BASE_URL || "https://knowyourclaw.com"}/api/v1/challenges/${challenge.id}/submit`,
       warning: `You have ${challenge.time_limit_seconds} seconds to complete all tasks. This is designed for AI agents.`,
     });
   } catch (error) {

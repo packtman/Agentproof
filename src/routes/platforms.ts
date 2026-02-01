@@ -43,9 +43,9 @@ platforms.post("/register", async (c) => {
       api_key: apiKey,
       important: "⚠️ SAVE YOUR API KEY! It will not be shown again.",
       usage: {
-        verification_endpoint: `${process.env.BASE_URL || "https://agentdmv.com"}/api/v1/verify`,
+        verification_endpoint: `${process.env.BASE_URL || "https://knowyourclaw.com"}/api/v1/verify`,
         header: "X-API-Key: " + apiKey,
-        example: `curl -X POST ${process.env.BASE_URL || "https://agentdmv.com"}/api/v1/verify \\
+        example: `curl -X POST ${process.env.BASE_URL || "https://knowyourclaw.com"}/api/v1/verify \\
   -H "X-API-Key: ${apiKey}" \\
   -H "Content-Type: application/json" \\
   -d '{"token": "<agent_proof_token>"}'`,

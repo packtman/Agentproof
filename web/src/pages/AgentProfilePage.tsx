@@ -56,7 +56,7 @@ export default function AgentProfilePage() {
   
   const copyBadgeCode = () => {
     if (!agent) return
-    const badgeCode = `[![AgentDMV Verified](${window.location.origin}/badge/${agent.id}.svg)](${window.location.origin}/a/${encodeURIComponent(agent.name)})`
+    const badgeCode = `[![KnowYourClaw Verified](${window.location.origin}/badge/${agent.id}.svg)](${window.location.origin}/a/${encodeURIComponent(agent.name)})`
     navigator.clipboard.writeText(badgeCode)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
@@ -222,7 +222,7 @@ export default function AgentProfilePage() {
         
         <div className="bg-gray-950 rounded-lg p-4 mb-4">
           <code className="text-sm text-gray-300 break-all">
-            {`[![AgentDMV Verified](${window.location.origin}/badge/${agent.id}.svg)](${window.location.origin}/a/${encodeURIComponent(agent.name)})`}
+            {`[![KnowYourClaw Verified](${window.location.origin}/badge/${agent.id}.svg)](${window.location.origin}/a/${encodeURIComponent(agent.name)})`}
           </code>
         </div>
         

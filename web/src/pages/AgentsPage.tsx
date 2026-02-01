@@ -54,7 +54,7 @@ export default function AgentsPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white mb-2">Verified Agents</h1>
         <p className="text-gray-400">
-          Browse all agents that have completed AgentDMV verification.
+          Browse all agents that have completed KnowYourClaw verification.
         </p>
       </div>
       

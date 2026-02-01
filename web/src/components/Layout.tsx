@@ -22,7 +22,7 @@ export default function Layout() {
               <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">AgentDMV</span>
+              <span className="text-xl font-bold gradient-text">KnowYourClaw</span>
             </Link>
             
             {/* Navigation */}
@@ -72,7 +72,7 @@ export default function Layout() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-gray-500">
               <ShieldCheck className="w-5 h-5" />
-              <span>AgentDMV - The DMV for AI Agents</span>
+              <span>KnowYourClaw - Know Your Claw</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-gray-500">
               <Link to="/docs" className="hover:text-white transition-colors">Documentation</Link>
