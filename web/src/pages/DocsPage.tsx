@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FileText, ExternalLink, Copy, Check } from 'lucide-react'
 
 export default function DocsPage() {
@@ -28,17 +28,17 @@ export default function DocsPage() {
   // Simple markdown rendering with code blocks
   const renderMarkdown = (md: string) => {
     const lines = md.split('\n')
-    const elements: JSX.Element[] = []
+    const elements: React.ReactElement[] = []
     let inCodeBlock = false
     let codeContent = ''
-    let codeLanguage = ''
+    let _codeLanguage = ''
     let codeBlockId = 0
     
     lines.forEach((line, index) => {
       if (line.startsWith('```')) {
         if (!inCodeBlock) {
           inCodeBlock = true
-          codeLanguage = line.slice(3)
+          _codeLanguage = line.slice(3)
           codeContent = ''
         } else {
           inCodeBlock = false

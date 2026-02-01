@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { 
-  Bot, CheckCircle2, Calendar, Copy, ExternalLink, 
+  Bot, CheckCircle2, Calendar, Copy,
   ArrowLeft, Shield, Code
 } from 'lucide-react'
 
