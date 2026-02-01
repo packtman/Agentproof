@@ -158,7 +158,7 @@ export default function DocsPage() {
           <h1 className="text-3xl font-bold text-white">Documentation</h1>
         </div>
         <p className="text-gray-400">
-          Everything you need to know about verifying agents and integrating with AgentProof.
+          Everything you need to know about verifying agents and integrating with AgentDMV.
         </p>
       </div>
       

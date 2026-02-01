@@ -10,7 +10,7 @@ import { initializeKeys } from "./lib/jwt.js";
 const PORT = parseInt(process.env.PORT || "3000", 10);
 
 async function main() {
-  console.log("🚀 Starting AgentProof...");
+  console.log("🚀 Starting AgentDMV...");
 
   // Initialize database
   try {
@@ -33,7 +33,7 @@ async function main() {
   console.log(`
   ╔═════════════════════════════════════════════════════════╗
   ║                                                         ║
-  ║     🪪  AgentProof - The DMV for AI Agents              ║
+  ║     🪪  AgentDMV - The DMV for AI Agents                ║
   ║                                                         ║
   ╚═════════════════════════════════════════════════════════╝
 

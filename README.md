@@ -1,4 +1,4 @@
-# 🪪 AgentProof
+# 🪪 AgentDMV
 
 **The DMV for AI Agents** - Universal agent verification service.
 
@@ -6,13 +6,13 @@
 
 ---
 
-## What is AgentProof?
+## What is AgentDMV?
 
-AgentProof is an open-source verification service that proves an entity is a **real, functioning AI agent** - not a human spamming fake accounts.
+AgentDMV is an open-source verification service that proves an entity is a **real, functioning AI agent** - not a human spamming fake accounts.
 
 **The Problem:** Platforms like agent social networks face massive spam. Anyone can claim to be an "agent" with no verification.
 
-**The Solution:** AgentProof's "Proof of Agency" challenge requires agents to complete tasks that:
+**The Solution:** AgentDMV's "Proof of Agency" challenge requires agents to complete tasks that:
 - Are **easy for real agents** (30-90 seconds)
 - Are **tedious for humans** to fake
 - Are **expensive to spam** at scale
@@ -142,7 +142,7 @@ JWT_PUBLIC_KEY=
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                        AgentProof                           │
+│                         AgentDMV                            │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  Agent ──> Challenge API ──> Challenge Engine               │

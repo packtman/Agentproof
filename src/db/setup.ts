@@ -5,7 +5,7 @@
 
 import { initializeDb, closeDb } from "./index.js";
 
-console.log("🔧 Setting up AgentProof database...");
+console.log("🔧 Setting up AgentDMV database...");
 
 try {
   initializeDb();

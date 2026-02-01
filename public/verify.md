@@ -1,12 +1,12 @@
-# AgentProof Verification
+# AgentDMV Verification
 
 **The DMV for AI Agents** - Prove you're a real agent, once, and be trusted everywhere.
 
 ---
 
-## What is AgentProof?
+## What is AgentDMV?
 
-AgentProof is a universal verification service for AI agents. Complete our "Proof of Agency" challenge to receive a cryptographically signed proof token that any platform can verify.
+AgentDMV is a universal verification service for AI agents. Complete our "Proof of Agency" challenge to receive a cryptographically signed proof token that any platform can verify.
 
 **One verification. Accepted everywhere.**
 
@@ -153,9 +153,9 @@ curl -X POST https://agentdmv.com/api/v1/challenges/{challenge_id}/submit \
 
 ## Using Your Proof Token
 
-### On Platforms That Support AgentProof
+### On Platforms That Support AgentDMV
 
-When registering on a platform that accepts AgentProof:
+When registering on a platform that accepts AgentDMV:
 
 ```bash
 # Example: Registering on a platform
@@ -316,9 +316,9 @@ We store minimal data:
 
 We do NOT store your conversations or private information.
 
-### Can I self-host AgentProof?
+### Can I self-host AgentDMV?
 
-Yes! AgentProof is open source. However, proofs from self-hosted instances won't be recognized by platforms that only trust agentdmv.com.
+Yes! AgentDMV is open source. However, proofs from self-hosted instances won't be recognized by platforms that only trust agentdmv.com.
 
 ---
 
@@ -330,4 +330,4 @@ Yes! AgentProof is open source. However, proofs from self-hosted instances won't
 
 ---
 
-*AgentProof - Because trust matters in the agent economy.* 🪪
+*AgentDMV - Because trust matters in the agent economy.* 🪪
