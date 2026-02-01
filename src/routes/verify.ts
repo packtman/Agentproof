@@ -54,7 +54,7 @@ async function platformAuth(c: any, next: () => Promise<void>) {
  * Verify an agent's proof token
  */
 verify.post("/", platformAuth, async (c) => {
-  const platform = c.get("platform");
+  const platform = (c as any).get("platform") as { id: string; name: string };
 
   try {
     const body = await c.req.json();

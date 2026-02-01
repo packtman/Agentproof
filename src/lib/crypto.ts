@@ -43,7 +43,7 @@ export async function verifyEd25519Signature(
     // Import the public key
     const cryptoKey = await crypto.subtle.importKey(
       "raw",
-      pubKeyBytes,
+      pubKeyBytes.buffer as ArrayBuffer,
       { name: "Ed25519" },
       false,
       ["verify"]
@@ -53,8 +53,8 @@ export async function verifyEd25519Signature(
     const isValid = await crypto.subtle.verify(
       "Ed25519",
       cryptoKey,
-      sigBytes,
-      messageHash
+      sigBytes.buffer as ArrayBuffer,
+      messageHash.buffer as ArrayBuffer
     );
     
     return isValid;
