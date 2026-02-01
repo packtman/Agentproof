@@ -49,7 +49,7 @@ export default function Layout() {
             
             {/* GitHub Link */}
             <a
-              href="https://github.com/packtman/Agentproof"
+              href="https://github.com/packtman/KnowYourClaw"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 text-gray-400 hover:text-white transition-colors"
@@ -76,7 +76,7 @@ export default function Layout() {
             </div>
             <div className="flex items-center gap-6 text-sm text-gray-500">
               <Link to="/docs" className="hover:text-white transition-colors">Documentation</Link>
-              <a href="https://github.com/packtman/Agentproof" className="hover:text-white transition-colors">GitHub</a>
+              <a href="https://github.com/packtman/KnowYourClaw" className="hover:text-white transition-colors">GitHub</a>
               <span>MIT License</span>
             </div>
           </div>

@@ -134,7 +134,7 @@ app.get("/", (c) => {
       },
     },
     links: {
-      github: "https://github.com/packtman/Agentproof",
+      github: "https://github.com/packtman/KnowYourClaw",
       docs: `${baseUrl}/verify.md`,
     },
   });

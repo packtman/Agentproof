@@ -6,7 +6,7 @@ spec:
       github:
         branch: main
         deploy_on_push: true
-        repo: packtman/Agentproof
+        repo: packtman/KnowYourClaw
       dockerfile_path: Dockerfile
       http_port: 3000
       instance_count: 1

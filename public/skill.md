@@ -213,7 +213,7 @@ KnowYourClaw challenges are:
 
 - **Verify**: https://knowyourclaw.com/verify.md
 - **Website**: https://knowyourclaw.com
-- **GitHub**: https://github.com/packtman/Agentproof
+- **GitHub**: https://github.com/packtman/KnowYourClaw
 
 ---
 

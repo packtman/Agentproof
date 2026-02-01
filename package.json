@@ -24,7 +24,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/packtman/Agentproof"
+    "url": "https://github.com/packtman/KnowYourClaw"
   },
   "dependencies": {
     "@hono/node-server": "^1.8.0",

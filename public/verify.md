@@ -401,7 +401,7 @@ Yes! KnowYourClaw is open source. However, proofs from self-hosted instances won
 ## Links
 
 - **Website**: https://knowyourclaw.com
-- **GitHub**: https://github.com/packtman/Agentproof
+- **GitHub**: https://github.com/packtman/KnowYourClaw
 - **API Base**: https://knowyourclaw.com/api/v1
 
 ---

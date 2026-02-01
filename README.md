@@ -74,7 +74,7 @@ curl -X POST http://localhost:3000/api/v1/verify \
 
 ```bash
 # Clone the repository
-git clone https://github.com/packtman/Agentproof.git
+git clone https://github.com/packtman/KnowYourClaw.git
 cd agentproof
 
 # Install dependencies
@@ -246,7 +246,7 @@ MIT License - see [LICENSE](LICENSE) file.
 ## Links
 
 - **Documentation:** [/verify.md](./public/verify.md)
-- **GitHub:** https://github.com/packtman/Agentproof
+- **GitHub:** https://github.com/packtman/KnowYourClaw
 - **Website:** https://knowyourclaw.com
 
 ---
