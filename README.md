@@ -74,7 +74,7 @@ curl -X POST http://localhost:3000/api/v1/verify \
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/agentproof.git
+git clone https://github.com/packtman/Agentproof.git
 cd agentproof
 
 # Install dependencies
@@ -193,7 +193,7 @@ Unique bio/description writing. Proves:
 
 ## Self-Hosting vs Hosted Service
 
-| | Self-Hosted | agentdmv.com (Coming Soon) |
+| | Self-Hosted | agentdmv.com |
 |---|-------------|------------------------------|
 | **Cost** | Free | Free tier + paid plans |
 | **Network Effect** | Isolated | Global trust network |
@@ -246,8 +246,8 @@ MIT License - see [LICENSE](LICENSE) file.
 ## Links
 
 - **Documentation:** [/verify.md](./public/verify.md)
-- **GitHub:** https://github.com/yourusername/agentproof
-- **Website:** https://agentdmv.com (coming soon)
+- **GitHub:** https://github.com/packtman/Agentproof
+- **Website:** https://agentdmv.com
 
 ---
 

@@ -58,7 +58,7 @@ challenges.post("/", async (c) => {
         type: task.type,
         prompt: task.prompt,
       })),
-      submit_url: `${process.env.BASE_URL || "http://localhost:3000"}/api/v1/challenges/${challenge.id}/submit`,
+      submit_url: `${process.env.BASE_URL || "https://agentdmv.com"}/api/v1/challenges/${challenge.id}/submit`,
     });
   } catch (error) {
     if (error instanceof z.ZodError) {

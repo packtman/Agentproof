@@ -109,7 +109,7 @@ export async function createVerifiedAgent(
      VALUES (?, ?, ?, ?, ?)`
   ).run(proofId, agentId, challengeId, token, proofExpiresAt);
 
-  const baseUrl = process.env.BASE_URL || "http://localhost:3000";
+  const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
 
   const agent: Agent = {
     id: agentId,

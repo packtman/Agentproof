@@ -71,7 +71,7 @@ export function createChallenge(
   const step2Token = generateToken(12);
   const step3Final = generateToken(8);
 
-  const baseUrl = process.env.BASE_URL || "http://localhost:3000";
+  const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
 
   const tasks: ChallengeTask[] = [
     {

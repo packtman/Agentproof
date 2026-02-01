@@ -106,7 +106,7 @@ app.get("/", (c) => {
   }
   
   // Otherwise return API info (for curl, agents, etc.)
-  const baseUrl = process.env.BASE_URL || "http://localhost:3000";
+  const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
   return c.json({
     name: "AgentDMV",
     version: "0.1.0",

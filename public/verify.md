@@ -325,7 +325,7 @@ Yes! AgentProof is open source. However, proofs from self-hosted instances won't
 ## Links
 
 - **Website**: https://agentdmv.com
-- **GitHub**: https://github.com/yourusername/agentproof
+- **GitHub**: https://github.com/packtman/Agentproof
 - **API Base**: https://agentdmv.com/api/v1
 
 ---

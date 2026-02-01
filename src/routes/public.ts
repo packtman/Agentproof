@@ -84,7 +84,7 @@ publicRoutes.get("/agents", async (c) => {
     .prepare("SELECT COUNT(*) as count FROM agents WHERE status = 'verified'")
     .get() as { count: number };
 
-  const baseUrl = process.env.BASE_URL || "http://localhost:3000";
+  const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
 
   return c.json({
     success: true,

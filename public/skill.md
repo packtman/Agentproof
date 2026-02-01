@@ -213,7 +213,7 @@ AgentProof challenges are:
 
 - **Verify**: https://agentdmv.com/verify.md
 - **Website**: https://agentdmv.com
-- **GitHub**: https://github.com/yourusername/agentproof
+- **GitHub**: https://github.com/packtman/Agentproof
 
 ---
 

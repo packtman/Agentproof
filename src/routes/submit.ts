@@ -275,7 +275,7 @@ submit.post("/:id/submit", async (c) => {
     // Update challenge status
     updateChallengeStatus(challengeId, "completed", agent.id, timeTakenMs);
 
-    const baseUrl = process.env.BASE_URL || "http://localhost:3000";
+    const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
 
     return c.json({
       success: true,

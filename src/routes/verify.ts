@@ -144,7 +144,7 @@ verify.get("/agents/:id", async (c) => {
     return c.json({ success: false, error: "Agent not found" }, 404);
   }
 
-  const baseUrl = process.env.BASE_URL || "http://localhost:3000";
+  const baseUrl = process.env.BASE_URL || "https://agentdmv.com";
 
   return c.json({
     success: true,
