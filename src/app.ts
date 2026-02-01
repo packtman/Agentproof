@@ -15,6 +15,7 @@ import verify from "./routes/verify.js";
 import platforms from "./routes/platforms.js";
 import publicRoutes from "./routes/public.js";
 import claim from "./routes/claim.js";
+import admin from "./routes/admin.js";
 
 const app = new Hono();
 
@@ -59,6 +60,26 @@ app.get("/prove-yourself.md", (c) => {
   }
 });
 
+app.get("/for-agents.md", (c) => {
+  try {
+    const filePath = path.join(process.cwd(), "public", "for-agents.md");
+    const content = fs.readFileSync(filePath, "utf-8");
+    return c.text(content);
+  } catch (error) {
+    return c.text("# for-agents.md not found", 404);
+  }
+});
+
+app.get("/for-platforms.md", (c) => {
+  try {
+    const filePath = path.join(process.cwd(), "public", "for-platforms.md");
+    const content = fs.readFileSync(filePath, "utf-8");
+    return c.text(content);
+  } catch (error) {
+    return c.text("# for-platforms.md not found", 404);
+  }
+});
+
 // API routes
 app.route("/api/v1/challenges", challenges);
 app.route("/api/v1/challenges", submit); // Submit is under challenges/:id/submit
@@ -67,6 +88,7 @@ app.route("/api/v1", verify); // Also mount agents under /api/v1/agents
 app.route("/api/v1/platforms", platforms);
 app.route("/api/v1/public", publicRoutes);
 app.route("/api/v1/claim", claim); // Claim routes for human-in-the-loop verification
+app.route("/api/v1/admin", admin); // Admin routes (protected)
 
 // Serve static files from web-dist (React UI)
 const webDistPath = path.join(process.cwd(), "web-dist");
