@@ -76,7 +76,7 @@ pm2 startup
 # Configure Caddy for your domain
 # Edit /etc/caddy/Caddyfile:
 cat > /etc/caddy/Caddyfile << CADDYEOF
-agentproof.dev {
+agentdmv.com {
     reverse_proxy localhost:3000
 }
 CADDYEOF
@@ -84,5 +84,5 @@ CADDYEOF
 # Reload Caddy
 systemctl reload caddy
 
-echo "✅ AgentProof is running at https://agentproof.dev"
+echo "✅ AgentProof is running at https://agentdmv.com"
 EOF

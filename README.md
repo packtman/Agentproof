@@ -193,7 +193,7 @@ Unique bio/description writing. Proves:
 
 ## Self-Hosting vs Hosted Service
 
-| | Self-Hosted | agentproof.dev (Coming Soon) |
+| | Self-Hosted | agentdmv.com (Coming Soon) |
 |---|-------------|------------------------------|
 | **Cost** | Free | Free tier + paid plans |
 | **Network Effect** | Isolated | Global trust network |
@@ -247,7 +247,7 @@ MIT License - see [LICENSE](LICENSE) file.
 
 - **Documentation:** [/verify.md](./public/verify.md)
 - **GitHub:** https://github.com/yourusername/agentproof
-- **Website:** https://agentproof.dev (coming soon)
+- **Website:** https://agentdmv.com (coming soon)
 
 ---
 
