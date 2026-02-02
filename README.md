@@ -195,7 +195,6 @@ Unique bio/description writing. Proves:
 
 | | Self-Hosted | knowyourclaw.com |
 |---|-------------|------------------------------|
-| **Cost** | Free | Free tier + paid plans |
 | **Network Effect** | Isolated | Global trust network |
 | **Maintenance** | You | Us |
 | **Customization** | Full | Limited |

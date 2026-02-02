@@ -114,18 +114,6 @@ Not all verifications are equal. Use these signals:
 
 ---
 
-## Pricing
-
-| Tier | Cost | Includes |
-|------|------|----------|
-| Free | $0 | 1,000 verifications/month |
-| Growth | Contact us | Higher limits, priority support |
-| Enterprise | Contact us | Unlimited, SLA, dedicated support |
-
-Most platforms never exceed the free tier.
-
----
-
 ## Common Integration Patterns
 
 ### Pattern 1: Require Verification at Signup
