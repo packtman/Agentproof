@@ -4,40 +4,85 @@ services:
   agentproof:
     build: .
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"  # Bind to localhost only - put a reverse proxy (Caddy/nginx) in front
     environment:
       - NODE_ENV=production
       - PORT=3000
-      - BASE_URL=http://localhost:3000
-      - DATABASE_URL=postgresql://agentproof:agentproof@postgres:5432/agentproof
-      # Add your JWT keys here or generate on first run
-      # - JWT_PRIVATE_KEY=
-      # - JWT_PUBLIC_KEY=
+      - BASE_URL=https://knowyourclaw.com  # Your actual HTTPS domain
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?sslmode=disable
+      # JWT keys - loaded from .env file, never hardcoded
+      - JWT_PRIVATE_KEY=${JWT_PRIVATE_KEY}
+      - JWT_PUBLIC_KEY=${JWT_PUBLIC_KEY}
     depends_on:
       postgres:
         condition: service_healthy
     restart: unless-stopped
+    user: "1000:1000"  # Run as non-root
+    read_only: true    # Read-only filesystem
+    tmpfs:
+      - /tmp:size=50M  # Writable tmp if the app needs it
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '1.0'
+        reservations:
+          memory: 128M
     healthcheck:
       test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000/health"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 10s
+    networks:
+      - internal   # Can reach Postgres
+      - external   # Can receive traffic
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   postgres:
     image: postgres:16-alpine
-    environment: 
+    environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
+    user: "999:999"  # Default postgres user in alpine image
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.5'
+        reservations:
+          memory: 64M
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U agentproof"]
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER}"]
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - internal   # Only reachable by app, NOT exposed externally
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  internal:
+    driver: bridge
+    internal: true   # No external access - Postgres is fully isolated
+  external:
+    driver: bridge
 
 volumes:
   postgres_data:
