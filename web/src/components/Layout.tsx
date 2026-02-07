@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from 'react-router-dom'
-import { ShieldCheck, Bot, FileText, Building2, Github, Users } from 'lucide-react'
+import { ShieldCheck, Bot, FileText, Building2, Github, Users, ShieldAlert } from 'lucide-react'
 
 export default function Layout() {
   const location = useLocation()
@@ -10,6 +10,7 @@ export default function Layout() {
     { path: '/for-platforms', label: 'For Platforms', icon: Building2 },
     { path: '/agents', label: 'Directory', icon: Users },
     { path: '/docs', label: 'API Docs', icon: FileText },
+    { path: '/skill-scanner', label: 'Skill Scanner', icon: ShieldAlert },
   ]
   
   return (
